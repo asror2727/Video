@@ -20,7 +20,7 @@ API_HASH = os.environ["API_HASH"]
 BOT_TOKEN = os.environ["BOT_TOKEN"]
 SESSION_STRING = os.environ["SESSION_STRING"]
 ALLOWED_CHAT_ID = int(os.getenv("ALLOWED_CHAT_ID", "0"))
-MAX_SECONDS = int(os.getenv("MAX_SECONDS", "180"))
+MAX_SECONDS = int(os.getenv("MAX_SECONDS", "240"))
 WORKDIR = Path(os.getenv("WORKDIR", "/tmp/kinobot"))
 WORKDIR.mkdir(parents=True, exist_ok=True)
 
