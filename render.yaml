@@ -1,0 +1,20 @@
+services:
+  - type: worker
+    name: kinobot-streamer
+    runtime: python
+    plan: starter
+    buildCommand: apt-get update && apt-get install -y ffmpeg && pip install -r requirements.txt
+    startCommand: python main.py
+    envVars:
+      - key: API_ID
+        sync: false
+      - key: API_HASH
+        sync: false
+      - key: BOT_TOKEN
+        sync: false
+      - key: SESSION_STRING
+        sync: false
+      - key: ALLOWED_CHAT_ID
+        sync: false
+      - key: MAX_SECONDS
+        value: "180"
